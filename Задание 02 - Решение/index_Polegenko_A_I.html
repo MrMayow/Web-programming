@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Сайт-визитка</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div>
+    <table border="1" cellspacing="0" cellpadding="14" width="100%">
+      <tr>
+        <td colspan="3" align="center" bgcolor="#e6f0fa">
+          <header>
+            <h1>Полегенько Алексей Иванович</h1>
+            <p>Сайт-визитка</p>
+          </header>
+        </td>
+      </tr>
+      <tr>
+        <td width="28%" height="170" valign="top">
+          <section>
+            <h2>Личные данные</h2>
+            <ol type="1">
+              <li>Дата рождения: 08.07.2004</li>
+              <li>Город: Москва</li>
+              <li>Образование: РУТ (МИИТ), компьютерная безопасность</li>
+            </ol>
+          </section>
+        </td>
+        <td width="44%">&nbsp;</td>
+        <td width="28%" valign="top">
+          <section>
+            <h2>Контакты</h2>
+            <ul type="disc">
+              <li>Электронная почта: <a href="mailto:polegenko.alexey@mail.ru">polegenko.alexey@mail.ru</a></li>
+              <li>Телефон: +7 (915) 165-01-32</li>
+            </ul>
+          </section>
+        </td>
+      </tr>
+      <tr>
+        <td width="28%" align="center" valign="middle">
+          <section id="svg-controls">
+            <h2>Оформление рисунка</h2>
+            <p><button type="button"
+                       onclick="changeColor('#b9845e', '#513629')">Обычная</button></p>
+            <p><button type="button"
+                       onclick="changeColor('#efd6aa', '#805333')">Светлая</button></p>
+            <p><button type="button"
+                       onclick="changeColor('none', '#191919')">Контур</button></p>
+          </section>
+        </td>
+        <td width="44%" height="300" align="center" valign="middle">
+          <section>
+            <svg width="350" height="250" viewBox="0 0 512 512"
+                 role="img" aria-label="Капибара">
+              <defs>
+                <mask id="body-mask" mask-type="alpha">
+                  <image href="ava.svg#silhouette" width="512" height="512"/>
+                </mask>
+                <mask id="outline-mask" mask-type="alpha">
+                  <image href="ava.svg" width="512" height="512"/>
+                </mask>
+              </defs>
+              <rect id="capybara-body" width="512" height="512"
+                    fill="#b9845e" mask="url(#body-mask)"/>
+              <rect id="capybara-outline" width="512" height="512"
+                    fill="#513629" mask="url(#outline-mask)"/>
+            </svg>
+          </section>
+        </td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="28%" height="135" valign="top">
+          <section>
+            <h2>Навыки</h2>
+            <ul type="circle">
+              <li>Работа с Git</li>
+              <li>Администрирование Linux/Windows серверов</li>
+              <li>Python, основы CSS и JavaScript</li>
+            </ul>
+          </section>
+        </td>
+        <td width="44%">&nbsp;</td>
+        <td width="28%" valign="top">
+          <section>
+            <h2>Дополнительная информация</h2>
+            <ol type="I">
+              <li>Интересы: безопасность приложений и проектирование ПО</li>
+              <li>Проект: система автономного судоходства (Python, Flask, MQTT)</li>
+              <li>Командное достижение: Гран-при межвузовских соревнований (2024)</li>
+            </ol>
+          </section>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center" bgcolor="#e6f0fa">
+          <footer>
+            <small>© 2026 Полегенько Алексей Иванович</small>
+          </footer>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
